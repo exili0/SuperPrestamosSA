@@ -80,6 +80,7 @@ public class LogIn extends Registro {
 			
 			if (caracter >= 128 && caracter <= 255){ // Este rango en ASCII es el de los cáracteres que no son anglosajones
 				valida = false;
+				break;
 			}
 			else {
 				valida = true;
