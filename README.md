@@ -1,8 +1,23 @@
 ¡Bienvenido al SuperPrestamosSA!
 
-Este proyecto, desarrollado por Mario, Nico y Alex , tiene como objetivo crear un sistema para una empresa ficticia que presta objetos y entidades 
+Este proyecto, desarrollado por Mario, Nico y Alex , tiene como objetivo crear un sistema para una empresa ficticia que presta recursos 
 relacionadas con el mundo de los superhéroes. 
-Desde armas místicas hasta los propios superhéroes, nuestro sistema facilita el proceso de préstamo siguiendo una serie de pasos sencillos.
+Desde armas místicas hasta los propios superhéroes, nuestro sistema facilita el proceso de préstamo siguiendo una serie de sencillos pasos.
+
+CREACIÓN DE LA APLICACIÓN
+
+Para organizar la codificación y la realización de tareas, se ha llevado a cabo la metodología SCRUM, cuyas características son:
+ - El software funcionando por encima de la documentación extensiva
+ - Valorar a los individuos y las iteraciones sobre el proceso y las herramientas
+ - Valorar más la respuesta ante el cambio que seguir un plan
+
+Teniendo en cuenta la fecha límite (29/4/2024) se han realizado varios Sprints para adecuarlo lo máximo poosible.
+Además, hemos organizado varias Daily Meeting (hablando de lo que hemos cambiado o añadido y viendo la dirección del proyecto) para poder estar preparados ante cualquier cambio o error repentino.
+
+REQUISITOS REALIZADOS POR CADA MIEMBRO DEL GRUPO:
+
+-> MARIO:
+-> NICO:
 
 OBJETIVOS DEL PROGRAMA 
 
