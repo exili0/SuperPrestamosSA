@@ -1,13 +1,13 @@
 package SuperPrestamosSA;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class Registro {
 	
-	protected String nickname,contrasenya;
-		
-	protected ArrayList<Administrador> listaAdmins = new ArrayList <>(5);
-	protected ArrayList<SuperEmpresa> listaSuperEmpresas = new ArrayList <>(5);
+	// Usaremos mapas (TreeMaps) para almacenar los datos nickname - contraseña / clave - valor
+	// Será la mejor opción ya que estarán en orden natural y no admitirá repetidos
 	
-
+	protected TreeMap<String,String> listaAdmins = new TreeMap <>(); // Administradores
+	protected TreeMap<String,String> listaSuperEmpresas = new TreeMap <>(); // SuperEmpresas
+	
 }
