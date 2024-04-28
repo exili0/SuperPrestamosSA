@@ -8,7 +8,7 @@ public class Test {
 		PreguntasFrecuentes FAQ = new PreguntasFrecuentes();
 		//System.out.println(FAQ.imprimirFAQ());
 		Menu menu = new Menu();
-		menu.imprimirMenu();
+		//menu.imprimirMenu();
 		
 	}
 
