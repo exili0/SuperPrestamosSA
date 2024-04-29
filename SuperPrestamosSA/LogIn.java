@@ -10,7 +10,8 @@ public class LogIn extends Registro {
 	public void bienvenida() {
 		Scanner sc = new Scanner(System.in); 
 		System.out.println("✦ Bienvenido a SuperPrestamos S.A! ✦");
-		System.out.println("1. Iniciar sesión como administrador\n2. Iniciar sesión como superempresa\n3. Iniciar sesión como invitado");
+		System.out.println("1. Iniciar sesión como administrador\n2. Iniciar sesión como superempresa\n3. Iniciar sesión como invitado"
+				+ "\n4. Preguntas Frecuentes");
 		
 		String opcionLogin;
 		Boolean opcionInvitado; // Esta booleano sirve de identificador para saber si solo se desea entar como invitado
@@ -36,6 +37,11 @@ public class LogIn extends Registro {
 			// Sesión inivitado
 			else if (opcionLogin.equals("3")) { // LOS BUCLES DE CONTRASEÑA Y NICKNAME FUNCIONAN IGUAL QUE ANTES
 				opcionInvitado = true;
+				opcionLogin="salir";// Salir del programa
+			}
+			else if (opcionLogin.equals("4")) { // LOS BUCLES DE CONTRASEÑA Y NICKNAME FUNCIONAN IGUAL QUE ANTES
+				PreguntasFrecuentes FAQ = new PreguntasFrecuentes();
+				System.out.println(FAQ.imprimirFAQ());
 				opcionLogin="salir";// Salir del programa
 			} 
 			else {
