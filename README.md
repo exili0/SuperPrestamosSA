@@ -25,14 +25,14 @@ OBJETIVOS DEL PROGRAMA
 
 - [x]  RQ01: Para iniciar sesión, se requerirá el nickname de usuario y su contraseña
 - [x]  RQ02: Dependiendo del rol del usuario (administrador superempresa o superempresa), se dirigirá a una ventana específica después del inicio de sesión.
-- [ ]  RQ03: La plataforma mostrará información predeterminada, pero para realizar acciones, las superempresas deben iniciar sesión. [ON LOAD]
+- [x]  RQ03: La plataforma mostrará información predeterminada, pero para realizar acciones, las superempresas deben iniciar sesión.
 - [ ]  RQ04: Después de tres intentos fallidos de inicio de sesión, la aplicación cerrará la sesión y sacará a las superempresas de la plataforma.
 (CORREGIR PARA QUE SEA CUANDO SE TRATE DE ENTRAR A UNA CUENTA YA CREADA)
 - [ ]  RQ05: Desde la pantalla de inicio de sesión, las superempresas podrán acceder a las opciones de recuperación de contraseña y registro.
 
 ## **— Registro ————————————————————**
 
-- [ ]  RQ06: Las contraseñas deben tener al menos 6 caracteres, incluyendo mayúsculas, minúsculas y números.
+- [x]  RQ06: Las contraseñas deben tener al menos 6 caracteres, incluyendo mayúsculas, minúsculas y números.
 - [x]  RQ07: Los nicknames deben estar compuestos por caracteres anglosajones y pueden incluir números, siendo únicos.
 - [ ]  RQ08: Durante el registro, las superempresas deben confirmar que tienen más de 14 años luchando contra el crimen y aceptar los términos y condiciones
 - [ ]  RQ09: Seleccionar una de las preguntas de seguridad predefinidas y proporcionar una respuesta para recuperar la contraseña en caso necesario.
@@ -47,7 +47,7 @@ OBJETIVOS DEL PROGRAMA
 
 ## **— Acceso invitado (sin Login)————————————————————**
 
-- [ ]  RQ18: Los usuarios invitados sin iniciar sesión podrán acceder aparte de las estadísticas y ver el título de la aplicación
+- [x]  RQ18: Los usuarios invitados sin iniciar sesión podrán acceder aparte de las estadísticas y ver el título de la aplicación
 - [ ]  RQ19: Se deberá incluir la opción de buscar por localización (zona en la que comparten recursos las superempresas, por ejemplo, Gotham) y visualizar todos los lugares relevantes de esa localización con los recursos correspondientes
 
 ## **— Gestión de Recursos————————————————————**
@@ -68,7 +68,7 @@ OBJETIVOS DEL PROGRAMA
 ## **— Ayudas e Información————————————————————**
 
 - [ ]  RQ29: Las superempresas recibirán mensajes informativos sobre la funcionalidad de la plataforma, que incluirán ayudas
-- [ ]  RQ30: Deberá haber una sección de Preguntas Frecuentes (FAQ).
+- [x]  RQ30: Deberá haber una sección de Preguntas Frecuentes (FAQ).
 
 ## **— Usabilidad y Accesibilidad————————————————————**
 
