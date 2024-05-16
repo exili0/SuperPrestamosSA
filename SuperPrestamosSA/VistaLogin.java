@@ -5,6 +5,9 @@ import java.awt.Container;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import java.awt.Color;
 
@@ -15,7 +18,7 @@ public class VistaLogin extends JFrame implements Vista{
 		pack();
 		setTitle("Página log in");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 750, 644);
+		setBounds(100, 100, 800, 600);
 		getContentPane().setLayout(null);
 		setVisible(true);
 
@@ -24,17 +27,31 @@ public class VistaLogin extends JFrame implements Vista{
 		lblTitulo.setBounds(215, 10, 380, 136);
 		getContentPane().add(lblTitulo);
 		
-		JButton btnRegistroAdmin = new JButton("INICIAR SESIÓN COMO ADMINISTRADOR");
-		btnRegistroAdmin.setBackground(new Color(255, 255, 255));
-		btnRegistroAdmin.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		btnRegistroAdmin.setBounds(216, 210, 343, 47);
-		getContentPane().add(btnRegistroAdmin);
+		JButton btnLoginAdmin = new JButton("INICIAR SESIÓN COMO ADMINISTRADOR");
+		btnLoginAdmin.setBackground(new Color(255, 255, 255));
+		btnLoginAdmin.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		btnLoginAdmin.setBounds(216, 210, 343, 47);
+		getContentPane().add(btnLoginAdmin);
+		btnLoginAdmin.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				setVisible(false);
+				VistaLoginAdmin vistaLoginAdmin = new VistaLoginAdmin();
+				vistaLoginAdmin.setVisible(true);
+			}
+		});
 		
-		JButton btnRegistroSuperE = new JButton("INICIAR SESIÓN COMO SUPEREMPRESA");
-		btnRegistroSuperE.setBackground(new Color(255, 255, 255));
-		btnRegistroSuperE.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		btnRegistroSuperE.setBounds(216, 315, 343, 47);
-		getContentPane().add(btnRegistroSuperE);
+		JButton btnLoginSE = new JButton("INICIAR SESIÓN COMO SUPEREMPRESA");
+		btnLoginSE.setBackground(new Color(255, 255, 255));
+		btnLoginSE.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		btnLoginSE.setBounds(216, 315, 343, 47);
+		getContentPane().add(btnLoginSE);
+		btnLoginSE.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				setVisible(false);
+				VistaLoginSE vistaLoginSE = new VistaLoginSE();
+				vistaLoginSE.setVisible(true);
+			}
+		});
 	}
 
 	@Override
