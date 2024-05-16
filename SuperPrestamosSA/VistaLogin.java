@@ -24,7 +24,7 @@ public class VistaLogin extends JFrame implements Vista{
 
 		JLabel lblTitulo = new JLabel("LOG IN");
 		lblTitulo.setFont(new Font("Tahoma", Font.PLAIN, 30));
-		lblTitulo.setBounds(215, 10, 380, 136);
+		lblTitulo.setBounds(353, 10, 380, 136);
 		getContentPane().add(lblTitulo);
 		
 		JButton btnLoginAdmin = new JButton("INICIAR SESIÓN COMO ADMINISTRADOR");
