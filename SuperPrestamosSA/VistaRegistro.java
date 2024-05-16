@@ -24,7 +24,7 @@ public class VistaRegistro extends JFrame implements Vista{
 
 		JLabel lblTitulo = new JLabel("REGISTRO");
 		lblTitulo.setFont(new Font("Tahoma", Font.PLAIN, 30));
-		lblTitulo.setBounds(215, 10, 380, 136);
+		lblTitulo.setBounds(330, 10, 380, 136);
 		getContentPane().add(lblTitulo);
 
 		JButton btnRegistroAdmin = new JButton("REGISTRARSE COMO ADMINISTRADOR");
