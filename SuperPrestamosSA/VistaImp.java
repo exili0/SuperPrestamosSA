@@ -63,6 +63,12 @@ public class VistaImp extends JFrame implements Vista {
 		btnFaq.setForeground(new Color(0, 0, 0));
 		btnFaq.setBounds(229, 373, 304, 56);
 		frame1.getContentPane().add(btnFaq);
+		btnFaq.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frame1.setVisible(false);
+				VistaFaq vistaFaq = new VistaFaq();
+			}
+		});
 		
 		frame1.setVisible(true);
 	}
