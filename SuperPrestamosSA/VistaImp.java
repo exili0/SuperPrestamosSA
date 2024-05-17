@@ -8,6 +8,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import java.awt.Color;
 
 public class VistaImp extends JFrame implements Vista {
 
@@ -17,6 +18,7 @@ public class VistaImp extends JFrame implements Vista {
 	public VistaImp() {
 
 		JFrame frame1 = new JFrame("Ventana Principal");
+		frame1.getContentPane().setBackground(new Color(151, 192, 109));
 		
 		frame1.setSize(800, 600);
 		frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -25,34 +27,41 @@ public class VistaImp extends JFrame implements Vista {
 		frame1.getContentPane().setLayout(null);
 
 		JLabel lblTitulo = new JLabel("SUPER PRÉSTAMOS S.A.");
-		lblTitulo.setBounds(215, 10, 380, 136);
-		lblTitulo.setFont(new Font("Tahoma", Font.PLAIN, 30));
+		lblTitulo.setBounds(195, 44, 446, 96);
+		lblTitulo.setFont(new Font("Segoe Script", Font.PLAIN, 30));
 		frame1.getContentPane().add(lblTitulo);
 
 		JButton btnLogin = new JButton("LOG IN");
-		btnLogin.setBounds(276, 203, 170, 44);
+		btnLogin.setFont(new Font("Segoe Script", Font.PLAIN, 15));
+		btnLogin.setBackground(new Color(204, 231, 197));
+		btnLogin.setForeground(new Color(0, 0, 0));
+		btnLogin.setBounds(297, 205, 170, 44);
 		frame1.getContentPane().add(btnLogin);
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame1.setVisible(false);
 				VistaLogin vistaLogin = new VistaLogin();
-//				vistaLogin.setVisible(true);
 			}
 		});
 
 		JButton btnRegistro = new JButton("REGISTRO");
-		btnRegistro.setBounds(276, 285, 170, 44);
+		btnRegistro.setFont(new Font("Segoe Script", Font.PLAIN, 15));
+		btnRegistro.setBackground(new Color(204, 231, 197));
+		btnRegistro.setForeground(new Color(0, 0, 0));
+		btnRegistro.setBounds(297, 292, 170, 44);
 		btnRegistro.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame1.setVisible(false);
 				VistaRegistro vistaRegistro = new VistaRegistro();
-//				vistaRegistro.setVisible(true);
 			}
 		});
 		frame1.getContentPane().add(btnRegistro);
 
 		JButton btnFaq = new JButton("PREGUNTAS FRECUENTES");
-		btnFaq.setBounds(276, 375, 170, 44);
+		btnFaq.setFont(new Font("Segoe Script", Font.PLAIN, 15));
+		btnFaq.setBackground(new Color(204, 231, 197));
+		btnFaq.setForeground(new Color(0, 0, 0));
+		btnFaq.setBounds(229, 373, 304, 56);
 		frame1.getContentPane().add(btnFaq);
 		
 		frame1.setVisible(true);
