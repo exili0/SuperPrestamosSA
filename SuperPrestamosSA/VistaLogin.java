@@ -15,19 +15,20 @@ public class VistaLogin extends JFrame implements Vista{
 	public VistaLogin() {
 		
 		JFrame frame2 = new JFrame("Ventana Login");
+		frame2.getContentPane().setBackground(new Color(151, 192, 109));
 		frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame2.setBounds(100, 100, 800, 600);
 		frame2.getContentPane().setLayout(null);
 
 		JLabel lblTitulo = new JLabel("LOG IN");
-		lblTitulo.setFont(new Font("Tahoma", Font.PLAIN, 30));
-		lblTitulo.setBounds(353, 10, 380, 136);
+		lblTitulo.setFont(new Font("Segoe Script", Font.PLAIN, 30));
+		lblTitulo.setBounds(324, 47, 143, 95);
 		frame2.getContentPane().add(lblTitulo);
 		
 		JButton btnLoginAdmin = new JButton("INICIAR SESIÓN COMO ADMINISTRADOR");
-		btnLoginAdmin.setBackground(new Color(255, 255, 255));
-		btnLoginAdmin.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		btnLoginAdmin.setBounds(242, 189, 343, 47);
+		btnLoginAdmin.setBackground(new Color(204, 231, 197));
+		btnLoginAdmin.setFont(new Font("Segoe Script", Font.PLAIN, 15));
+		btnLoginAdmin.setBounds(194, 212, 410, 47);
 		frame2.getContentPane().add(btnLoginAdmin);
 		btnLoginAdmin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -37,10 +38,23 @@ public class VistaLogin extends JFrame implements Vista{
 			}
 		});
 		
+		JButton btnVolver = new JButton("Volver");
+		btnVolver.setFont(new Font("Segoe Print", Font.PLAIN, 13));
+		btnVolver.setBackground(new Color(204, 231, 197));
+		btnVolver.setBounds(28, 30, 100, 29);
+		frame2.getContentPane().add(btnVolver);
+		btnVolver.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frame2.setVisible(false);
+				VistaImp vistaImp = new VistaImp();
+			}
+		});
+		
+		
 		JButton btnLoginSE = new JButton("INICIAR SESIÓN COMO SUPEREMPRESA");
-		btnLoginSE.setBackground(new Color(255, 255, 255));
-		btnLoginSE.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		btnLoginSE.setBounds(242, 311, 343, 47);
+		btnLoginSE.setBackground(new Color(204, 231, 197));
+		btnLoginSE.setFont(new Font("Segoe Script", Font.PLAIN, 15));
+		btnLoginSE.setBounds(194, 323, 410, 47);
 		frame2.getContentPane().add(btnLoginSE);
 		btnLoginSE.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
