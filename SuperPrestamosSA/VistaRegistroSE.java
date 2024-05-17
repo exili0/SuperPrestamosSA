@@ -13,32 +13,31 @@ import javax.swing.JLabel;
 public class VistaRegistroSE extends JFrame implements Vista {
 
 	public VistaRegistroSE() {
-		getContentPane().setLayout(null);
-
-		pack();
-		setTitle("Página registro SuperEmpresa");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 800, 600);
-		getContentPane().setLayout(null);
-		setVisible(true);
+		
+		JFrame frame8 = new JFrame("Ventana Registro SE");
+		frame8.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame8.setBounds(100, 100, 800, 600);
+		frame8.getContentPane().setLayout(null);
 
 		JLabel lblTitulo = new JLabel("REGISTRO SUPEREMPRESA");
 		lblTitulo.setFont(new Font("Tahoma", Font.PLAIN, 30));
-		lblTitulo.setBounds(215, 10, 380, 136);
-		getContentPane().add(lblTitulo);
+		lblTitulo.setBounds(238, 21, 380, 136);
+		frame8.getContentPane().add(lblTitulo);
 		
 		JButton btnAltaSE = new JButton("REGISTRARSE");
 		btnAltaSE.setBackground(new Color(255, 255, 255));
 		btnAltaSE.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		btnAltaSE.setBounds(216, 210, 343, 47);
-		getContentPane().add(btnAltaSE);
+		btnAltaSE.setBounds(284, 286, 265, 66);
+		frame8.getContentPane().add(btnAltaSE);
 		btnAltaSE.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				setVisible(false);
+				frame8.setVisible(false);
 				VistaImp vistaImp = new VistaImp();
-				vistaImp.setVisible(true);
+//				vistaImp.setVisible(true);
 			}
 		});
+		
+		frame8.setVisible(true);
 	}
 
 	@Override
