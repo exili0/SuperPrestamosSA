@@ -15,30 +15,30 @@ public class VistaLoginSE extends JFrame implements Vista {
 
 	public VistaLoginSE() {
 
-		pack();
-		setTitle("Página login SuperEmpresa");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 800, 600);
-		getContentPane().setLayout(null);
-		setVisible(true);
+		JFrame frame4 = new JFrame("Ventana Login SE");
+		frame4.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame4.setBounds(100, 100, 800, 600);
+		frame4.getContentPane().setLayout(null);
 
 		JLabel lblTitulo = new JLabel("LOGIN SUPEREMPRESA");
-		lblTitulo.setBounds(215, 10, 380, 136);
+		lblTitulo.setBounds(250, 10, 380, 136);
 		lblTitulo.setFont(new Font("Tahoma", Font.PLAIN, 30));
-		getContentPane().add(lblTitulo);
+		frame4.getContentPane().add(lblTitulo);
 		
 		JButton btnEntrarSE = new JButton("INICIAR SESIÓN");
 		btnEntrarSE.setBackground(new Color(255, 255, 255));
 		btnEntrarSE.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		btnEntrarSE.setBounds(216, 210, 343, 47);
-		getContentPane().add(btnEntrarSE);
+		btnEntrarSE.setBounds(270, 277, 277, 66);
+		frame4.getContentPane().add(btnEntrarSE);
 		btnEntrarSE.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				setVisible(false);
+				frame4.setVisible(false);
 				VistaRecursos vistaRecursos = new VistaRecursos();
-				vistaRecursos.setVisible(true);
+//				vistaRecursos.setVisible(true);
 			}
 		});
+		
+		frame4.setVisible(true);
 	}
 
 	@Override
