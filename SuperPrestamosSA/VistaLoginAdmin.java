@@ -8,7 +8,6 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import java.awt.FlowLayout;
 import javax.swing.JButton;
 
 public class VistaLoginAdmin extends JFrame implements Vista {
