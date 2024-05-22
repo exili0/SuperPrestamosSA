@@ -33,7 +33,10 @@ public class VistaLogin extends JFrame implements Vista{
 		btnLoginAdmin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame2.setVisible(false);
+				VistaRegistroAdmin vistaRegistroAdmin = new VistaRegistroAdmin();
+				vistaRegistroAdmin.setVisible(false);
 				VistaLoginAdmin vistaLoginAdmin = new VistaLoginAdmin();
+
 //				vistaLoginAdmin.setVisible(true);
 			}
 		});
