@@ -20,7 +20,7 @@ public class VistaImp extends JFrame implements Vista {
 		JFrame frame1 = new JFrame("Ventana Principal");
 		frame1.getContentPane().setBackground(new Color(151, 192, 109));
 		
-		frame1.setSize(800, 600);
+		frame1.setBounds(100, 100, 800, 600);
 		frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		
