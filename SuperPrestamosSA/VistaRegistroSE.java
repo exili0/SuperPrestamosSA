@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JCheckBox;
 
@@ -48,8 +49,34 @@ public class VistaRegistroSE extends JFrame implements Vista {
 		frame8.getContentPane().add(btnAltaSE);
 		btnAltaSE.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				frame8.setVisible(false);
-				VistaImp vistaImp = new VistaImp();
+				// Comprobación contraseña
+
+				String contrasenya = textFieldContrasenyaSE.getText();
+				String repetirContrasenya = textFieldContrasenyaRepetirSE.getText();
+
+				LogIn loginAdmin = new LogIn();
+				if (!loginAdmin.verificarContrasenya(contrasenya)) {
+					JOptionPane.showMessageDialog(frame8,
+							"Contraseña incorrecta ✖\nLa contraseña debe contener al menos 6 caracteres, un número, una mayúscula y una minúscula");
+				} else if (!contrasenya.equals(repetirContrasenya)) {
+					JOptionPane.showMessageDialog(frame8, "Las contraseñas no coinciden");
+				} else {
+					JOptionPane.showMessageDialog(frame8, "Contraseña validada ✔");
+
+					// Comprobación nickname
+
+					String nickname = textFieldNicknameSE.getText();
+
+					LogIn loginAdmin2 = new LogIn();
+					if (!loginAdmin2.verificarNickname(nickname)) {
+						JOptionPane.showMessageDialog(frame8,
+								"Nickname incorrecto ✖\nEl nickname debe estar compuesto por caracteres anglosajones");
+					} else {
+						frame8.setVisible(false);
+						VistaImp vistaImp = new VistaImp();
+
+					}
+				}
 			}
 		});
 		
@@ -138,6 +165,16 @@ public class VistaRegistroSE extends JFrame implements Vista {
 		
 		frame8.setVisible(true);
 	}
+	
+	// Para luego poder recogerlas desde el login
+	
+	public String getNickname() {
+        return textFieldNicknameSE.getText();
+    }
+
+    public String getContrasenya() {
+        return textFieldContrasenyaSE.getText();
+    }
 
 	@Override
 	public void setControlador(Controlador controlador) {
