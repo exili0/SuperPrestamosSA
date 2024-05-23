@@ -15,8 +15,8 @@ import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 
 public class VistaLoginAdmin extends JFrame implements Vista {
-	private JTextField textField;
-	private JPasswordField passwordField;
+	private JTextField textFieldNicknameA;
+	private JTextField textFieldContrasenyaA;
 
 	public VistaLoginAdmin() {
 
@@ -41,14 +41,10 @@ public class VistaLoginAdmin extends JFrame implements Vista {
 		lblPasswordA.setBounds(314, 283, 124, 36);
 		frame3.getContentPane().add(lblPasswordA);
 
-		textField = new JTextField();
-		textField.setBounds(314, 217, 145, 29);
-		frame3.getContentPane().add(textField);
-		textField.setColumns(10);
-
-		passwordField = new JPasswordField();
-		passwordField.setBounds(314, 333, 145, 29);
-		frame3.getContentPane().add(passwordField);
+		textFieldNicknameA = new JTextField();
+		textFieldNicknameA.setBounds(314, 217, 145, 29);
+		frame3.getContentPane().add(textFieldNicknameA);
+		textFieldNicknameA.setColumns(10);
 
 		JButton btnVolver = new JButton("Volver");
 		btnVolver.setFont(new Font("Segoe Print", Font.PLAIN, 13));
@@ -67,27 +63,42 @@ public class VistaLoginAdmin extends JFrame implements Vista {
 		btnEntrarAdmin.setFont(new Font("Segoe Script", Font.PLAIN, 15));
 		btnEntrarAdmin.setBounds(270, 422, 224, 47);
 		frame3.getContentPane().add(btnEntrarAdmin);
+		
+		textFieldContrasenyaA = new JTextField();
+		textFieldContrasenyaA.setColumns(10);
+		textFieldContrasenyaA.setBounds(314, 335, 145, 29);
+		frame3.getContentPane().add(textFieldContrasenyaA);
 		btnEntrarAdmin.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
+				
+				// INTENTO DE COMPROBAR SI NICKNAME Y CONTRASEÑA SON CORRECTOS (AL FINAL LLEVO DIRECTAMENTE A RECURSOS)
 
-				VistaRegistroAdmin vistaRegistroAdmin = new VistaRegistroAdmin();
-				VistaLoginAdmin vistaLoginAdmin = new VistaLoginAdmin();
+//				VistaRegistroAdmin vistaRegistroAdmin = new VistaRegistroAdmin();
+//				vistaRegistroAdmin.setVisible(false);
+//				VistaLoginAdmin vistaLoginAdmin = new VistaLoginAdmin();
 
-				String nickname = vistaRegistroAdmin.getNickname();
+//				String nickname = vistaRegistroAdmin.getNickname();
+//				String contrasenya = vistaRegistroAdmin.getContrasenya();
+
 				// JPasswordField devuelve un array de chars por lo que hay que tratarlo
 				// diferente
-				char[] arrayContrasenya = passwordField.getPassword();
-				String contrasenya = new String(arrayContrasenya); // Lo pasamos a String
+//				char[] arrayContrasenya = passwordField.getPassword();
+//				String contrasenyaLogin = new String(arrayContrasenya); // Lo pasamos a String
 
-				if (nickname.equals(textField.getText()) && contrasenya.equals(vistaRegistroAdmin.getContrasenya())) {
+				String nicknameLogin = textFieldNicknameA.getText();
+				String contrasenyaLogin = textFieldContrasenyaA.getText();
 
+//				if (((!nicknameLogin.equals(nickname)) || (!contrasenyaLogin.equals(contrasenya)))) {
+//
+//					JOptionPane.showMessageDialog(frame3, "Nickname o contraseña incorrectos");
+//
+//				} else {}
+				
 					frame3.setVisible(false);
 					VistaRecursos vistaRecursos = new VistaRecursos();
-				} else {
-					JOptionPane.showMessageDialog(frame3, "Nickname o contraseña incorrectos");
 				}
-			}
+			
 
 		});
 
